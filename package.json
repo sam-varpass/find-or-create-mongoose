@@ -1,0 +1,19 @@
+{
+	"name": "mongoose-find-or-create",
+	"version": "0.1.0",
+	"description": "Atomic find-or-create plugin for mongoose",
+	"main": "index.js",
+	"scripts": {
+		"test": "npm test"
+	},
+	"keywords": [
+		"mongoose",
+		"findorcreate",
+		"atomic"
+	],
+	"author": "Sam Smith <iamsamsmith.co>",
+	"license": "ISC",
+	"devDependencies": {
+		"eslint-config-airbnb-base": "13.1.0"
+	}
+}
