@@ -1,4 +1,4 @@
-# Mongoose findOrCreate plugin <atomic> [STATUS SHIELD]
+# Mongoose findOrCreate plugin <atomic> [![CircleCI](https://circleci.com/gh/sam-varpass/find-or-create-mongoose/tree/master.svg?style=shield)](https://circleci.com/gh/sam-varpass/find-or-create-mongoose/tree/master)
 
 A findOrCreate plugin that's [atomic](https://en.wikipedia.org/wiki/Atomicity_(database_systems)). A necessary characteristic for use in scaled, distributed systems. Achieved by reducing the `findOrCreate` determination to a single mongo operation.
 
