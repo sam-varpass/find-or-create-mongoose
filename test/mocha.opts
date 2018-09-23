@@ -4,5 +4,6 @@
 --bail
 --check-leaks
 --globals mongoose
---require test/support/env.js test/support/database.js
+--require test/support/env.js
+--file test/support/database.js
 test/**/*.test.js

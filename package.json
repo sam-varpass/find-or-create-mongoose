@@ -1,6 +1,10 @@
 {
 	"name": "find-or-create-mongoose",
 	"version": "0.1.0",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sam-varpass/find-or-create-mongoose"
+	},
 	"description": "Atomic find-or-create plugin for mongoose",
 	"main": "index.js",
 	"scripts": {
