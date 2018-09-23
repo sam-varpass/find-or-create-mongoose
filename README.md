@@ -5,6 +5,15 @@ A findOrCreate plugin that's [atomic](https://en.wikipedia.org/wiki/Atomicity_(d
 
 ## How To Use
 
+#### You can set the plugin on the mongoose instance:
+```
+// app.js
+const mongoose = require('mongoose');
+const findOrCreate = requir ('find-or-create-mongoose');
+mongoose.plugin(findOrCreate);
+```
+
+#### Or on individual schemas:
 ```
 // people.model.js
 
@@ -20,21 +29,20 @@ schema.plugin(findOrCreate);
 module.exports = mongoose.model('People', schema, 'people');
 ```
 
+#### Then use it ...
 ```
 // people.controller.js
 
-const findOrCreateJohn = async () => {
-	const findBy = { name: 'John' };
-	const onCreate = { name: 'John', age: 29 };
+const findBy = { name: 'John' };
+const onCreate = { name: 'John', age: 29 };
 
-	const result = await model.findOrCreate(findBy, onCreate);
+const result = await model.findOrCreate(findBy, onCreate);
 
 /*
-* result === {
-*	writeResult: 'create' / 'find',
-*	document: { THE_MONGO_RECORD }
-* }
+ * result === {
+ *	writeResult: 'create' / 'find',
+ *	document: { THE_MONGO_RECORD }
+ * }
 **/
-
-}
 ```
+

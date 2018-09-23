@@ -1,0 +1,8 @@
+--reporter spec
+--ui bdd
+--recursive
+--bail
+--check-leaks
+--globals mongoose
+--require test/support/env.js test/support/database.js
+test/**/*.test.js

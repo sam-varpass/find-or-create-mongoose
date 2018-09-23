@@ -4,7 +4,7 @@
 	"description": "Atomic find-or-create plugin for mongoose",
 	"main": "index.js",
 	"scripts": {
-		"test": "npm test"
+		"test": "mocha --exit"
 	},
 	"keywords": [
 		"mongoose",
@@ -14,6 +14,12 @@
 	"author": "Sam Smith <iamsamsmith.co>",
 	"license": "ISC",
 	"devDependencies": {
-		"eslint-config-airbnb-base": "13.1.0"
+		"eslint-config-airbnb-base": "13.1.0",
+		"mocha": "5.2.0",
+		"mongoose": "5.2.17",
+		"should": "13.2.3"
+	},
+	"dependencies": {
+		"lodash": "4.17.11"
 	}
 }
