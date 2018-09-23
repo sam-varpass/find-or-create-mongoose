@@ -1,5 +1,5 @@
 {
-	"name": "mongoose-find-or-create",
+	"name": "find-or-create-mongoose",
 	"version": "0.1.0",
 	"description": "Atomic find-or-create plugin for mongoose",
 	"main": "index.js",
