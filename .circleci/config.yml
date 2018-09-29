@@ -27,7 +27,7 @@ jobs:
           at: ~/repo
       - run:
           name: Authenticate with registry
-          command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
+          command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/project/.npmrc
       - run:
           name: Publish package
           command: |
@@ -38,9 +38,8 @@ jobs:
             git tag "v`grep '"version"' package.json | egrep -o "[0-9]+.[0-9]+.[0-9]+"`"
             git push --tags
             # checkout development and bump the version
-            git checkout origin/development
+            git checkout -b circle-ci-version-bump origin/development
             git pull
-            git checkout -b circle-ci-version-bump
             npm --no-git-tag-version version patch
             git add package.json
             git commit -m "`grep '"version"' package.json | egrep -o "[0-9]+.[0-9]+.[0-9]+"`"
@@ -48,7 +47,8 @@ jobs:
             # checkout master again and delete our local branch
             git checkout master
             git branch -D circle-ci-version-bump
-            npm publish
+            # publish
+            npm publish ~/project/
             
 workflows:
   version: 2
