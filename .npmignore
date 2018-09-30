@@ -1,5 +1,5 @@
 node_modules
 .vscode
-circle.yml
+.circleci/
 test
 .eslintrc.js
